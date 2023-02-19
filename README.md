@@ -36,4 +36,21 @@ To run the program after installation, follow the steps below:
     ```sh
     python3 main.py
     ```
-  This will execute the program.
+  This will execute the program/
+  
+# Program Usage Instructions
+
+## Steps
+
+1. Select the main folder containing the photos you want to stitch together. Ensure that the folder only contains image files that you want to use for the panorama.
+
+2. Create a subfolder within the main folder where the stitched image will be saved. This subfolder should be named "output" to ensure that the program can find it.
+
+3. Run the program, and it will automatically stitch together the photos in the main folder and save the result in the output folder. 
+
+4. After the output image is created, please ensure to delete the original unstitched images in the main folder. This is important to remove duplication and avoid confusion when dealing with large amounts of photos.
+
+## Conclusion
+
+Following the steps above will allow you to successfully stitch together photos to create a panoramic image.
+
