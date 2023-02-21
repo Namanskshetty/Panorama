@@ -132,14 +132,13 @@ def open_cv():
                     cv2.imwrite(filename_out,result)
                     print("The panoroma is saved in OUTPUT folder!!!!")
                     cv2.waitKey(1)
-                    success(done)
                 else:
                     print("Could not perform")
                     done=0
                     time.sleep(2)
                     lb_done = Label(window, text="Could not perform", font=("Arial Bold", 15),bg="black", fg="red")
                     lb_done.place(relx=0.5, rely=0.81, anchor="center")
-                    success(done)
+            success(done)
             cv2.waitKey(0)#this makes the window of the cv2 open to review
 
 labell.configure()
