@@ -65,6 +65,7 @@ bt_help.place(relx=0.01,rely=0.01)
 labell=Label(window, text="",bg="black")
 ########## Sucess message ##############
 def success(done): 
+    global mainFolder
     if done==1:
         labell.configure(text = "Process completed check the output folder!!!",fg="green",bg="#FCFFE7", borderwidth=2, relief="raised")
         destination=d+"\copy"
