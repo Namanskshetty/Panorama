@@ -53,4 +53,5 @@ To run the program after installation, follow the steps below:
 ## Conclusion
 
 Following the steps above will allow you to successfully stitch together photos to create a panoramic image.
-
+## Original
+<a href="https://github.com/Namanskshetty/Panorama">Naman sk shetty</a>
