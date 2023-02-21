@@ -36,7 +36,7 @@ To run the program after installation, follow the steps below:
     ```sh
     python3 main.py
     ```
-  This will execute the program/
+  This will execute the program
   
 # Program Usage Instructions
 
