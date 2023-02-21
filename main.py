@@ -67,6 +67,8 @@ labell=Label(window, text="",bg="black")
 def success(done): 
     if done==1:
         labell.configure(text = "Process completed check the output folder!!!",fg="green",bg="#FCFFE7", borderwidth=2, relief="raised")
+        destination=d+"\copy"
+        shutil.move(mainFolder, destination)# this places the main folder into copy so that to remove duplicate images to be stiched
         return
     elif done==0:
         labell.configure(text = "Process cannot be completed",fg="red",bg="#FCFFE7", borderwidth=2, relief="raised")
@@ -122,22 +124,21 @@ def open_cv():
                 if(status==cv2.STITCHER_OK):
                     print("done")
                     done=1
-                    lb_done = Label(window, text="Panorama Completed. Check the output folder", font=("Arial Bold", 15),bg="black", fg="green")
-                    lb_done.place(relx=0.5, rely=0.81, anchor="center")
+                    #lb_done = Label(window, text="Panorama Completed. Check the output folder", font=("Arial Bold", 15),bg="black", fg="green")
+                    #lb_done.place(relx=0.5, rely=0.81, anchor="center")
                     cv2.imshow(folder,result)
                     filename_out=folder_save+'/'+str(num)+"_namanskshetty.png" #change the name accordingly
                     cv2.imwrite(filename_out,result)
                     print("The panoroma is saved in OUTPUT folder!!!!")
-                    destination=d+"\copy"
-                    shutil.move(mainFolder, destination)# this places the main folder into copy so that to remove duplicate images to be stiched
                     cv2.waitKey(1)
-          
+                    success(done)
                 else:
                     print("Could not perform")
                     done=0
                     time.sleep(2)
                     lb_done = Label(window, text="Could not perform", font=("Arial Bold", 15),bg="black", fg="red")
                     lb_done.place(relx=0.5, rely=0.81, anchor="center")
+                    success(done)
             cv2.waitKey(0)#this makes the window of the cv2 open to review
 
 labell.configure()
